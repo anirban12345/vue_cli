@@ -58,12 +58,14 @@ export default {
         {
           id:"1",
           name:"Anirban",
-          address:"Barabazar"
+          address:"Barabazar",
+          active:true
         },
         {
           id:"2",
           name:"Gargi",
-          address:"Dakhineswar"
+          address:"Dakhineswar",
+          active:false
         },
     ]
   },

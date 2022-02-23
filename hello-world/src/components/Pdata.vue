@@ -1,16 +1,20 @@
 <template>  
-      <tr>
+      <tr :class="[pdata.active ? 'alert-success' : 'alert-danger']">
         <td>{{pdata.name}}</td>
         <td>{{pdata.address}}</td>
       </tr>
 </template>
 
 <script>
+
+
 export default {
-  name: 'Pdata',    
+  name: 'Pdata',  
+  
   props: {
     pdata: Object,
-  }
+  },
+  
 }
 </script>
 
