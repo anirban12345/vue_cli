@@ -29,7 +29,7 @@
     </div>
   </div>
   <br />
-  <Persondata :persondata="persondata" />  
+  <Persondata @pdata-delete="pdataDelete" :persondata="persondata" />  
 </div>
   
 </template>
@@ -52,6 +52,13 @@ export default {
       persondata:[]
     }
   },
+  methods()
+  {
+    pdataDelete(id)
+    {
+        console.log('task ',id);
+    }    
+  },
   created()
   {
     this.persondata=[
@@ -65,7 +72,7 @@ export default {
           id:"2",
           name:"Gargi",
           address:"Dakhineswar",
-          active:false
+          active:true
         },
     ]
   },

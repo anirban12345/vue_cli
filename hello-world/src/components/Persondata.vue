@@ -7,7 +7,7 @@
       </tr>
     </thead>
     <tbody :key="pdata.id" v-for="pdata in persondata">  
-      <Pdata :pdata="pdata" />  
+      <Pdata @pdata-delete="$emit('pdata-delete',pdata.id)" :pdata="pdata" />      
     </tbody>
   </table>
 </template>
@@ -23,7 +23,11 @@ export default {
   },  
   props: {
     persondata: Array,
-  }
+  },
+  methods()
+  {
+    
+  }  
 }
 </script>
 

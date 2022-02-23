@@ -8,28 +8,9 @@ export default {
   props: {
     text: String,
     classname: String
-  },
-  data(){
-        return {
-            text:this.text,
-            classname:this.classname
-        }
-  }, 
+  },  
   methods:{
-    async onCLick()
-    {
-      console.log(this.text);
-      if(this.text=="Activate")
-      {
-        this.text="Deactivate";
-        this.classname="btn btn-danger btn-sm";
-      }
-      if(this.text=="Deactivate")
-      {
-        this.text="Activate";
-        this.classname="btn btn-success btn-sm";
-      }
-    }
+    
   },
 }
 </script>
