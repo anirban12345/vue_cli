@@ -2,8 +2,11 @@
 
 <div class="container-fluid">
   <Header title="Home"/>
-  <Adddata @pdata-add="pdataAdd" />
-  
+
+  <div v-show="showAddData">
+    <Adddata @pdata-add="pdataAdd" />
+  </div>
+
   <br />
   <Persondata @pdata-activate="pdataActivate" @pdata-delete="pdataDelete" :persondata="persondata" />  
 </div>
@@ -27,7 +30,8 @@ export default {
   data()
   {
     return {
-      persondata:[]
+      persondata:[],
+      showAddData: true
     }
   },
   methods:
