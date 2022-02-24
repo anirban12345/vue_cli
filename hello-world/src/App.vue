@@ -29,7 +29,7 @@
     </div>
   </div>
   <br />
-  <Persondata @pdata-delete="pdataDelete" :persondata="persondata" />  
+  <Persondata @pdata-activate="pdataActivate" @pdata-delete="pdataDelete" :persondata="persondata" />  
 </div>
   
 </template>
@@ -52,12 +52,20 @@ export default {
       persondata:[]
     }
   },
-  methods()
+  methods:
   {
     pdataDelete(id)
     {
-        console.log('task ',id);
-    }    
+        //console.log('task ',id);
+        if(confirm("Are Your Sure?")){
+          this.persondata=this.persondata.filter((pdata)=>pdata.id!==id)
+        }        
+    }, 
+    pdataActivate(id)   
+    {
+      //console.log('task ',id);
+      this.persondata=this.persondata.map((pdata)=>pdata.id===id?{...pdata,active:!pdata.active}:pdata)
+    }
   },
   created()
   {
@@ -72,7 +80,7 @@ export default {
           id:"2",
           name:"Gargi",
           address:"Dakhineswar",
-          active:true
+          active:false
         },
     ]
   },

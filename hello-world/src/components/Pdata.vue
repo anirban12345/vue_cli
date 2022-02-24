@@ -3,6 +3,7 @@
         <td>{{pdata.name}}</td>
         <td>{{pdata.address}}</td>
         <td>
+          <div @click="$emit('pdata-activate',pdata.id)" :class="[pdata.active?'btn btn-warning btn-sm text-white':'btn btn-success btn-sm text-white']">{{pdata.active?'Deactivate':'Activate'}}</div>
           <div @click="$emit('pdata-delete',pdata.id)" class="btn btn-danger btn-sm text-white">Delete</div>
         </td>
       </tr>
