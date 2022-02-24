@@ -2,32 +2,8 @@
 
 <div class="container-fluid">
   <Header title="Home"/>
+  <Adddata @pdata-add="pdataAdd" />
   
-  <div class="row">
-    <div class="col-12">
-      <div class="card">
-        <div class="card-header">
-          <h5>Enter Details</h5>
-        </div>
-        <div class="card-body">
-            <div class="form-group">
-              <label for="name">Name:</label>
-              <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name">
-            </div>
-            <div class="form-group">
-              <label for="address">Address</label>
-              <input type="text" class="form-control" id="address" placeholder="Enter Address" name="address">
-            </div>            
-        </div>        
-        <div class="card-footer">
-          <Button class="btn btn-success btn-sm" text="Save" />
-          &nbsp;<Button class="btn btn-info btn-sm" text="Edit" />
-          &nbsp;<Button class="btn btn-danger btn-sm" text="Delete" />
-        </div> 
-
-      </div>
-    </div>
-  </div>
   <br />
   <Persondata @pdata-activate="pdataActivate" @pdata-delete="pdataDelete" :persondata="persondata" />  
 </div>
@@ -36,6 +12,7 @@
 
 <script>
 import Header from './components/Header.vue'
+import Adddata from './components/Adddata.vue'
 import Button from './components/Button.vue'
 import Persondata from './components/Persondata.vue'
 
@@ -43,6 +20,7 @@ export default {
   name: 'App',
   components: {  
     Header,
+    Adddata,
     Button,
     Persondata
   },
@@ -65,6 +43,10 @@ export default {
     {
       //console.log('task ',id);
       this.persondata=this.persondata.map((pdata)=>pdata.id===id?{...pdata,active:!pdata.active}:pdata)
+    },
+    pdataAdd(pdata)
+    {
+      this.persondata=[...this.persondata,pdata]
     }
   },
   created()
