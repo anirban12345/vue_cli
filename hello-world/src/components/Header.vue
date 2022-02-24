@@ -1,8 +1,8 @@
 <template>  
   <header>    
     <h2>Welcome {{title}} </h2>
-    <button type="button" class="btn btn-info btn-sm">Add New Data</button>
-    <br />
+    <Button @toggle-add-pdata="$emit('toggle-add-pdata')" :class="showAddData?'btn btn-danger btn-sm':'btn btn-info btn-sm'" :text="showAddData?'Close':'Add New Data'" />
+    
   </header>
 </template>
 
@@ -11,9 +11,10 @@ import Button from './Button.vue'
 export default {
   name: 'Header',
   props: {
-    title: String
+    title: String,
+    showAddData:Boolean
   },
-  component:{
+  components:{
     Button
   }
 

@@ -1,13 +1,13 @@
 <template>
 
 <div class="container-fluid">
-  <Header title="Home"/>
-
+  <Header @toggle-add-pdata="toggleAddPdata" title="Home" :showAddData="showAddData"/>
+  <br />
   <div v-show="showAddData">
     <Adddata @pdata-add="pdataAdd" />
+    <br />  
   </div>
-
-  <br />
+  
   <Persondata @pdata-activate="pdataActivate" @pdata-delete="pdataDelete" :persondata="persondata" />  
 </div>
   
@@ -51,6 +51,10 @@ export default {
     pdataAdd(pdata)
     {
       this.persondata=[...this.persondata,pdata]
+    },
+    toggleAddPdata()
+    {
+      this.showAddData=!this.showAddData
     }
   },
   created()

@@ -10,12 +10,17 @@ export default {
     classname: String
   },  
   methods:{
-    
+    onClick()
+    {
+      //console.log('click');
+      this.$emit('toggle-add-pdata')
+    }
   },
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-@import url('https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css');
+
 </style>
+``

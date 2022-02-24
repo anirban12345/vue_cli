@@ -2,12 +2,10 @@
   <div class="row">
     <div class="col-12">
       <div class="card">
-        <div class="card-header">
-          <h5>Enter Details</h5>
-        </div>
-
         <form @submit="onSubmit">
-          <div class="card-body">          
+          <div class="card-body"> 
+              <h4>Enter Details</h4>  
+              <hr />       
               <div class="form-group">
                 <label for="name">Name:</label>
                 <input type="text" v-model="name" class="form-control" id="name" placeholder="Enter Name" name="name">
@@ -16,16 +14,8 @@
                 <label for="address">Address</label>
                 <input type="text" v-model="address" class="form-control" id="address" placeholder="Enter Address" name="address">
               </div>     
-            
-          </div>        
-          <div class="card-footer">
-            <!--<Button class="btn btn-success btn-sm" text="Save" />
-            &nbsp;<Button class="btn btn-info btn-sm" text="Edit" />
-            &nbsp;<Button class="btn btn-danger btn-sm" text="Delete" />
-            -->
-
-            <button type="submit" class="btn btn-success btn-sm">Save</button>
-          </div> 
+              <button type="submit" class="btn btn-success btn-block">Save</button>  
+          </div>                  
         </form>                   
 
       </div>
