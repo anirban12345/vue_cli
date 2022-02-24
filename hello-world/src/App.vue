@@ -31,7 +31,7 @@ export default {
   {
     return {
       persondata:[],
-      showAddData: true
+      showAddData: false
     }
   },
   methods:
