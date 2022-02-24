@@ -1,0 +1,21 @@
+{
+    "persondata":[
+    {
+        "id":"1",
+        "name":"Anirban",
+        "address":"Barabazar",
+        "active":true
+    },
+    {
+        "id":"2",
+        "name":"Gargi",
+        "address":"Dakhineswar",
+        "active":false
+    },
+    {
+        "id":"3",
+        "name":"Subhankar",
+        "address":"Baguiati",
+        "active":true 
+    }
+]}

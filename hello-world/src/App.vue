@@ -55,24 +55,24 @@ export default {
     toggleAddPdata()
     {
       this.showAddData=!this.showAddData
+    },
+    async fetchPersonData()
+    {
+      const res=await fetch("http://localhost:5000/persondata")
+      const data=await res.json()
+      return data;
     }
+    /*
+    async fetchPData(id)
+    {
+      const res=await fetch(`api/persondata/${id}`);
+      const data=await res.json();
+      return data;
+    }*/
   },
-  created()
+  async created()
   {
-    this.persondata=[
-        {
-          id:"1",
-          name:"Anirban",
-          address:"Barabazar",
-          active:true
-        },
-        {
-          id:"2",
-          name:"Gargi",
-          address:"Dakhineswar",
-          active:false
-        },
-    ]
+    this.persondata=await this.fetchPersonData();
   },
 }
 </script>
