@@ -9,6 +9,9 @@
   </div>
   
   <Persondata @pdata-activate="pdataActivate" @pdata-delete="pdataDelete" :persondata="persondata" />  
+
+  <router-view></router-view>
+  
   <Footer />
 </div>
   
