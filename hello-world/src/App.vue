@@ -58,7 +58,7 @@ export default {
     },
     async fetchPersonData()
     {
-      const res=await fetch("http://localhost:5000/persondata")
+      const res=await fetch('api/persondata')
       const data=await res.json()
       return data;
     }
