@@ -4,30 +4,36 @@
       "id": "1",
       "name": "Anirban",
       "address": "Barabazar",
-      "active": false
+      "active": true
     },
     {
       "id": "2",
       "name": "Gargi",
       "address": "Dakhineswar",
-      "active": true
+      "active": false
     },
     {
       "id": "3",
       "name": "Subhankar",
       "address": "Baguiati",
-      "active": false
+      "active": true
     },
     {
       "id": 392,
       "name": "Sourav",
       "address": "Halisahar",
-      "active": true
+      "active": false
     },
     {
       "id": 683,
       "name": "Podip",
       "address": "Barasat",
+      "active": true
+    },
+    {
+      "id": 935,
+      "name": "Raman Das",
+      "address": "Maniktala",
       "active": false
     }
   ]
